@@ -1,5 +1,5 @@
 # MVP — CEP para Laticinios (I-MR e Xbar-R rolling)
-Este notebook implementa um MVP de Controle Estatistico de Processos (CEP) para a industria laticinia usando a base `milknew_organizado.xlsx` hospedada no GitHub. Ele monitora as variaveis continuas **pH** e **Temperature** por meio das cartas **I-MR** e, opcionalmente, **Xbar-R** com janelas deslizantes (rolling). Os graficos usam CL verde tracejada, UCL/LCL vermelhos tracejados e pontos fora de controle em vermelho.
+Esse MVP é para a industria laticinia usando a base de dados `milknew_organizado.xlsx` advinda do Kaggle hospedada no GitHub. Ele monitora as variaveis continuas **pH** e **Temperature** por meio das cartas **I-MR** e, opcionalmente, **Xbar-R** com janelas deslizantes (rolling). Os graficos usam CL verde tracejada, UCL/LCL vermelhos tracejados e pontos fora de controle em vermelho.
 
 ## Passo 1 — Configuracoes e imports
 Definimos parametros do experimento e importamos as bibliotecas. `RAW_URL` e `FILE_NAME` servem para baixar a planilha automaticamente. A carta I-MR sempre e executada; a Xbar-R (rolling) e opcional via `USE_ROLLING_XBARR`. `ROLL_N`, `ROLL_STEP` e `ROLL_MIN_R` regulam o tamanho/qualidade dos subgrupos deslizantes (descartando janelas com R~0).
