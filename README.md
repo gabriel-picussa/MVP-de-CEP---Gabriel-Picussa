@@ -248,4 +248,44 @@ for var in variaveis:
 print("Pronto! Gerado I-MR (sempre) e Xbar-R rolling (se USE_ROLLING_XBARR=True).")
 ```
 ## Passo 8 — Interpretacao e proximos passos
-Use os graficos para monitorar estabilidade. Pontos fora de UCL/LCL sugerem causas especiais. MR alto indica mudancas bruscas; R alto indica variabilidade interna de subgrupo. Muitos R~0 sugerem subgrupos nao racionais — prefira I-MR. Extensoes: Regras Western Electric, capabilidade (Cp/Cpk) e exportacao de figuras.
+## Passo 8 — Interpretacao e proximos passos
+
+**I Chart – Individuals**: É o gráfico superior da carta I–MR. **No ph:** O gráfico mostra o pH oscilando em torno de 6,6 — e como o processo é muito estável, os limites ficaram bem estreitos.
+Por isso, pequenas flutuações já aparecem como “fora de controle”, mas na prática o processo está estável (é apenas sensibilidade matemática).
+**Na temperatura**: mostra o comportamento das medições individuais ao longo do processo. A linha central (CL) representa a média de todas as temperaturas (≈ 44,2 °C), enquanto as linhas vermelhas (UCL e LCL) indicam os limites de variação esperada. No gráfico, observam-se diversos pontos acima e abaixo desses limites, revelando oscilações bruscas — ou seja, o processo não está sob controle estatístico, pois há interferências externas que alteram a temperatura de forma irregular.
+
+**MR Chart – Moving Range**: É o gráfico inferior da carta I–MR.
+Cada ponto representa o valor absoluto da diferença entre duas medições consecutivas. 
+
+Para o **pH**, quase todos os MR ficaram próximos de zero → processo extremamente uniforme. 
+
+Para a **Temperatura**, há picos enormes → mostra que o processo teve mudanças abruptas (variação térmica intensa, troca de fase ou falha no controle).
+
+
+
+**X̄–R (Rolling)** é uma adaptação moderna da carta tradicional X̄–R usada quando você não possui subgrupos racionais (ex.: lote, turno, hora); mas quer observar a tendência média do processo e a estabilidade da variação.
+
+
+
+**Para o ph (dentro do gráfico X-R)**: O processo de pH apresentou baixa variabilidade, o que é comum em produtos lácteos bem controlados (o pH do leite tende a ficar entre 6,5 e 6,8).
+Isso fez com que:
+
+A linha central (CL) ficasse em torno de 6,63, e
+
+A amplitude média (R̄) fosse muito pequena.
+
+Como consequência:
+
+Os limites de controle (UCL e LCL) ficaram extremamente estreitos, porque o cálculo do desvio padrão (σ = MR̄/d₂) resultou em um valor muito baixo.
+
+Mesmo pequenas flutuações numéricas (ex.: 6,60 → 6,67) parecem “grandes” para o gráfico, gerando pontos que saem do limite — mas isso não significa erro real do processo.
+
+**Para a temperatura (dentro do gráfico X-R)**: A variável Temperatura mostrou grande dispersão e oscilações bruscas, o que indica instabilidade no processo.
+
+A média (CL) ficou em torno de 44,2 °C, mas houve medições variando de 34 °C a 90 °C.
+
+O gráfico I Chart mostra várias “rampas” e picos acima e abaixo da faixa de controle.
+
+O gráfico MR Chart (diferença entre medições consecutivas) mostra picos altos, indicando que a temperatura mudou muito entre uma observação e outra.
+
+
